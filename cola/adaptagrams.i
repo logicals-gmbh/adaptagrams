@@ -310,7 +310,6 @@ void deleteDoubleArray(double* a) {
 %include "libdialect/chains.h"
 %include "libdialect/constraints.h"
 %include "libdialect/faces.h"
-%include "libdialect/graphs.h"
 %include "libdialect/hola.h"
 %include "libdialect/io.h"
 %include "libdialect/nearalign.h"
