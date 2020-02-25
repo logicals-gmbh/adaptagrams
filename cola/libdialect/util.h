@@ -184,7 +184,7 @@ private:
     // of pairs, giving the original point (x, y), and the object of type T.
     // So it looks like:
     //              (int, int) --> [ {(x,y), T}, {(x,y), T}, ... ]
-    std::map<int, std::map<int, std::vector<std::pair<Avoid::Point, T>>>> m_objects;
+    std::map<int, std::map<int, std::vector<std::pair<Avoid::Point, T> > > > m_objects;
 };
 
 //! @brief Partition a vector of items according to a key value.
@@ -198,9 +198,9 @@ private:
 //!
 //! @return vector of vectors of objects of type T.
 template <typename T>
-std::vector<std::vector<T>> partition(std::vector<T> items, std::function<double(T)> key, double tolerance=0) {
+std::vector<std::vector<T> > partition(std::vector<T> items, std::function<double(T)> key, double tolerance=0) {
     // Prepare the return value
-    std::vector<std::vector<T>> parts;
+    std::vector<std::vector<T> > parts;
     // If there are no items, there is nothing to do.
     if (items.size() == 0) return parts;
     // Else sort by the given key.

@@ -415,7 +415,7 @@ public:
     //!                     A "chain" is a consecutive sequence of "links" whose endpoints are distinct.
     //! @param[out] cycles  Vector of deques of Nodes, where each identified "cycle" will be recorded.
     //!                     A "cycles" is a consecutive sequence of "links" that forms a closed loop.
-    void getChainsAndCycles(std::vector<std::deque<Node_SP>> &chains, std::vector<std::deque<Node_SP>> &cycles);
+    void getChainsAndCycles(std::vector<std::deque<Node_SP> > &chains, std::vector<std::deque<Node_SP> > &cycles);
 
     //! @brief  Write TGLF to represent this Graph.
     //! @param[in] useExternalIds  When a Graph is built from TGLF its Nodes store the IDs that
@@ -704,7 +704,7 @@ private:
 
     //! Node position stack, for saving positions while attempting
     //! possible layouts.
-    std::stack<std::map<id_type, Avoid::Point>> m_posStack;
+    std::stack<std::map<id_type, Avoid::Point> > m_posStack;
 
 };
 

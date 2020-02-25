@@ -64,7 +64,7 @@ LinkShapes bentLinkShapeCwFromStartingPt(LinkShape start);
 //! Lookup table:
 //! Given one of the four bent LinkShapes b, and a CardinalDir d, return the CardinalDir you
 //! would be going if you came into bend b going in direction d, and then followed the bend.
-extern const std::map<LinkShape, std::map<CardinalDir, CardinalDir>> applyBendToDir;
+extern const std::map<LinkShape, std::map<CardinalDir, CardinalDir> > applyBendToDir;
 
 //! Lookup table:
 //! For any of the four bent LinkShapes, return its clockwise incoming CardinalDir.
@@ -83,7 +83,7 @@ extern const std::map<LinkShape, CardinalDir> cwIncomingDirForBend;
 //! we depart, d1 is the direction we travel as we enter node Z (and therefore is the OPPOSITE of
 //! the side of Z at which we enter). For example d1 = EAST means we are traveling east as we enter
 //! node Z (but we enter it on its west side).
-extern const std::map<CompassDir, std::map<CardinalDir, std::map<CardinalDir, std::vector<std::vector<LinkShape>>>>> minimalBendSeqs;
+extern const std::map<CompassDir, std::map<CardinalDir, std::map<CardinalDir, std::vector<std::vector<LinkShape> > > > > minimalBendSeqs;
 
 //! @brief  Look up the minimal bend sequences for a Chain.
 //! @param[in] A  The left anchor Node of the Chain.
@@ -94,7 +94,7 @@ extern const std::map<CompassDir, std::map<CardinalDir, std::map<CardinalDir, st
 //! @return Vector of vectors of LinkShapes, giving all possible minimal bend sequences for this Chain.
 //! @note This does work correctly even for the case of a chain in which the left and right anchor nodes are the
 //!       same (as, e.g., in a figure-8 network).
-std::vector<std::vector<LinkShape>> lookupMinimalBendSeqs(Node_SP A, CardinalDir d0, Node_SP Z, CardinalDir d1);
+std::vector<std::vector<LinkShape> > lookupMinimalBendSeqs(Node_SP A, CardinalDir d0, Node_SP Z, CardinalDir d1);
 
 
 //! @brief  List the possible cardinal directions from node1 to node2, if they were to be
@@ -164,7 +164,7 @@ struct AestheticBend {
 typedef std::shared_ptr<AestheticBend> AestheticBend_SP;
 typedef std::vector<AestheticBend_SP> AestheticBends;
 
-typedef std::vector<std::pair<CardinalDir, CardinalDir>> ChainConfigSeq;
+typedef std::vector<std::pair<CardinalDir, CardinalDir> > ChainConfigSeq;
 
 //! @brief A Chain is a sequence of degree-2 Nodes, possibly forming a cycle.
 //!

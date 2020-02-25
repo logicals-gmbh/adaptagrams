@@ -307,8 +307,8 @@ public:
     //! @param[out] hSets  Will be populated with a lookup from Node ID to set of IDs of
     //!                    all Nodes that are horizontally aligned with that one.
     //! @param[out] vSets  Like hSets, only for vertical alignment.
-    void getAlignedSets(std::map<id_type, std::set<id_type>> &hSets,
-                        std::map<id_type, std::set<id_type>> &vSets) const;
+    void getAlignedSets(std::map<id_type, std::set<id_type> > &hSets,
+                        std::map<id_type, std::set<id_type> > &vSets) const;
     //! @brief  Check whether two nodes are horizontally aligned.
     bool areHAligned(id_type id1, id_type id2) const;
     //! @brief  Check whether two nodes are vertically aligned.

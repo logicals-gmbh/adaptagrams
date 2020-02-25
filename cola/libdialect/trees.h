@@ -189,7 +189,7 @@ private:
     // the lower and upper bounds on the lateral coordinates
     // of the tree, for each rank (e.g. for NORTH growth direction the
     // bounds are on x-coordinates).
-    std::vector<std::vector<double>> m_boundsByRank;
+    std::vector<std::vector<double> > m_boundsByRank;
     // We also keep global lower and upper bounds on rank coords.
     double m_lb;
     double m_ub;

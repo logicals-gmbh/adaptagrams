@@ -293,12 +293,12 @@ private:
     Faces m_faces;
     Face_SP m_externalFace;
     //! Let each Node ID map to the vector of Faces to which it belongs.
-    std::map<id_type, std::set<Face_SP>> m_facesByMemberNodeId;
+    std::map<id_type, std::set<Face_SP> > m_facesByMemberNodeId;
     //! We also want lookups for aligned sets of nodes, i.e. want to be able to look up
     //! for any given node, what is the set of all other nodes with which it is aligned
     //! in either dimension.
-    std::map<id_type, std::set<id_type>> m_hSets;
-    std::map<id_type, std::set<id_type>> m_vSets;
+    std::map<id_type, std::set<id_type> > m_hSets;
+    std::map<id_type, std::set<id_type> > m_vSets;
 };
 
 
@@ -343,7 +343,7 @@ public:
     std::string toString(void) const;
 
     //! @brief  Access the neighbour pairs.
-    std::map<id_type, std::vector<std::pair<Node_SP, Node_SP>>> getNbrPairs(void) {return m_nbrPairs;}
+    std::map<id_type, std::vector<std::pair<Node_SP, Node_SP> > > getNbrPairs(void) {return m_nbrPairs;}
 
     //! @brief  Get a vector of all Sides that are relevant to a given TreePlacement.
     Sides getRelevantSidesForPlacement(TreePlacement_SP tp) const;
@@ -522,7 +522,7 @@ private:
     //! the sequence v -> u -> w is encountered in clockwise cyclic traversal of the Face.
     //! So we keep a lookup of the form,
     //!             u.id --> [{v0, w0}, {v1, w1}, ...]
-    std::map<id_type, std::vector<std::pair<Node_SP, Node_SP>>> m_nbrPairs;
+    std::map<id_type, std::vector<std::pair<Node_SP, Node_SP> > > m_nbrPairs;
     //! The Sides of the Face:
     Sides m_sides;
     //! The Nexes, indexed by the IDs of the Nodes they represent:

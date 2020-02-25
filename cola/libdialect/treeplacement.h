@@ -213,7 +213,7 @@ private:
     Node_SP m_boxNode = nullptr;
 
     //! Want to know which other nodes are aligned with the root node in each dimension.
-    std::map<vpsc::Dim, std::set<id_type>> m_rootAligns;
+    std::map<vpsc::Dim, std::set<id_type> > m_rootAligns;
 
 };
 
